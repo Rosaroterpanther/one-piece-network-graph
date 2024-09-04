@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One piece force directed network graph</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="graph.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4efeb;
+        }
+        svg {
+            width: 100%;
+            height: 1200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>One piece force directed network graph</h1>
+
+    <!-- Filter Options -->
+    <div class="filters">
+        <label for="saga">Saga:</label>
+        <select id="saga">
+            <option value="all">All</option>
+            <!-- Options will be dynamically populated -->
+        </select>
+
+        <label for="arc">Arc:</label>
+        <select id="arc">
+            <option value="all">All</option>
+            <!-- Options will be dynamically populated -->
+        </select>
+
+        <label for="episode">Episode:</label>
+        <input type="number" id="episode" placeholder="All" min="1">
+
+        <label for="filler">Filler:</label>
+        <input type="checkbox" id="filler" value="true">
+    </div>
+
+    <br />
+
+    <svg id="graph">
+        <g class="graph"></g>
+    </svg>
+
+</body>
+</html>
